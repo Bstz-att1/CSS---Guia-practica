@@ -1,0 +1,14 @@
+*{
+    font-family: monospace;background-color: aqua; font-size: 40px;font-style: italic;
+}
+p{
+    color:rgb(108, 34, 227);
+}/*Cambia el color de la fuente a un morado ligero*/
+.destacado {
+    font-weight: 300;font-weight: bold;color: fuchsia;
+}/*Hace que cierto texto determinado con la clase destacado este
+en negrilla y aumente la altura de la fuente y su color cambie a fucsia*/
+#importante {
+    font-size: 32px;color: darkblue;
+}/*Aumenta el tamaño de la fuente de un texto determinado con la id importante 
+y cambia el color a un azul oscuro*/

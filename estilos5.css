@@ -1,0 +1,86 @@
+div p {
+    color:blue;font-weight: bold;
+}/*todos los p que se encuentren dentro del elemento div tendran color de texto azul
+y estaran en negrilla,lo optimiza ya que al tener un valor bajo y mas general nos evitamos
+futuros conflictos al modificar elementos individuales */
+h2 ~ p {
+    font-style: italic;text-decoration: underline;
+}/*todos los p generales de h2 tendran el estilo italiano y los subraya, 
+lo optimiza ya que al tener un valor bajo y mas general nos evitamos
+futuros conflictos al modificar elementos individuales*/
+h1 {
+    font-size: 40px;
+}
+/* 1. Reseteo de box-sizing para todo el documento */
+/* Esto hace que padding y border se incluyan en el ancho y alto definidos */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+.contenido {
+     flex: 1; /* ocupa el espacio restante */
+    border: 1px solid #ccc;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}/*Crea una caja que rodea el parrafo principal y el parrafo que esta por dentro, le da color al 
+borde y 1px, el padding en 15px para no ocupar el espacio del parrafo principal y setea un espacio
+con el mismo de 15px*/
+.parrafo1 {
+    border: 1px solid #aaa;
+    padding: 10px;
+    background-color: #fff;
+}/*Le coloca un borde de 1px con color gris, el color d efondo en blanco y el padding 
+con un espacio de 10px*/
+.parrafo2 {
+    border-color: #007acc;
+    border: 1px solid ;
+}/*hace que el color del borde sea de un azul y le da un borde de 1px*/
+.Hermanos {
+    border-top: 2px solid #666;
+    padding: 10px;
+    margin-top: 20px;
+    text-align: center;
+    background-color: #eee;
+}/*setea el tope del borde, el espacio del padding en 20px, el tope del margen en 20px
+alinea el texto al centro y el fondo de blanco*/
+.listanavegacion > li {
+    display: inline-block;
+    border-right: 1px solid #ccc;
+}/* añade una caja blanca solo a los <li> que están directamente dentro de .nav-list */
+.itemnavac + .itemnav {
+    background-color: #f0f0f0;
+}/*estiliza el <li> que viene justo después del activo cambiandole el color del boton*/
+.itemnavac a {
+    font-weight: bold;
+    color: #007acc;
+}
+.itemnav a {
+    font-weight: bold;
+    color: #007acc;
+}/*le cambia el color a todos los elementos con la clase itemnav y itemnavac*/
+.Cartas {
+    border-top: 2px solid #666;
+    padding: 10px;
+    margin-top: 20px;
+    text-align: center;
+    background-color: #eee; 
+}
+#imagenvalak {
+    text-align: center;
+}/*centra la imagen al centro, al alinear la caja que contiene la imagen*/
+div > .caracteristicas {
+    text-align: center; color: rgb(0, 38, 71);font-weight: bold;
+}/*cambia el color,la altura de la fuente y alinea el texto al centro*/
+div ~ .titulocaracteristicas {
+    text-align: center; color: rgb(0, 0, 0);font-weight: bold;font-size: 20px;font-family: 'Times New Roman', Times, serif;font-size: 45;
+}/*cambia el color, la altura y el tamaño de la fuente y alinea el texto al centro*/
+br + h2 {
+    color: rgb(0, 4, 12);font-size: 40px;font-family: Georgia, 'Times New Roman', Times, serif;
+}/*cambia el color de el h2 adyacente a br, ambas cambian la estrcutura debido a su especificidad
+y afectan solo a elementos especificos*/
+.titulocarta {
+    text-align: center;font-weight: bold;
+}
