@@ -1,0 +1,46 @@
+div {
+    color: darkblue;
+}
+h1 + p {
+    color: rgb(1, 160, 152);font-weight: bold;font-size: 20px;font-family: Arial, Helvetica, sans-serif;
+}/*Cambia la fuente, la altura, el tamaño y el color del texto al hermano adyacente de h1, 
+al tener mas especifidad sobrepone los cambios a los estandares */
+h1 {
+    font-size: 40px;font-weight: bold;
+}
+.contenido > h2 {
+    color: black;font-weight: bold;font-size: 25px;
+}/*Aplica el color negro,coloca el texto en negrilla y aumenta el tamaño de la fuente de un h2 anidado en contenido, 
+al tener mas especficidad que los estilos aplicados a div, estos se sobreponen*/
+.contenido > p {
+    font-family: Arial, Helvetica, sans-serif; color: rgb(1, 160, 152);
+}
+h2 ~ #descripcion{
+    color: darkblue;
+}/*Cambia el color a un azul oscuro de todos los hermanos generales de h2 con la id descripcion,
+(no incluye h2 o elementos sin la id),al tener mas especificidad se sobrepone a lo demas,
+se puede usar cuando deseamos cambiar algo en especifico dentro de otro elemento al que ya le realizamos
+cambios sin afectar el resto de elementos, por ejemplo encabezados sin afectar el contenido*/
+nav ul {
+    color: rgb(56, 1, 255);
+}/*cambia el color de las listas que estan dentro de nav */
+br + h2 {
+    color: cornflowerblue;
+}/*cambia el color de el h2 adyacente a br, ambas cambian la estrcutura debido a su especificidad
+y afectan solo a elementos especificos*/
+#titulotarjetas {
+    color: black;font-size: 60px;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+}/*cambia el color, la familia y el tamaño de la fuente y alinea el texto al centro*/
+#titulotarjetas + h2 {
+    color: crimson;font-family: Georgia, 'Times New Roman', Times, serif;text-align: center;
+}/*cambia el color, la familia y alinea el texto al centro*/
+#imagenjason {
+    text-align: center;
+}/*centra la imagen al centro, al alinear la caja que contiene la imagen*/
+div > .caracteristicas {
+    text-align: center; color: rgb(0, 38, 71);font-weight: bold;
+}/*cambia el color,la altura de la fuente y alinea el texto al centro*/
+div ~ .titulocaracteristicas {
+    text-align: center; color: rgb(219, 165, 114);font-weight: bold;font-size: 20px;
+}/*cambia el color, la altura y el tamaño de la fuente y alinea el texto al centro*/
